@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: radial-gradient(#f5f5f5, #adadad);
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body main {
+  min-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+body main .header {
+  margin: 2rem 0 0;
+  text-align: center;
+}
+body main .header h1 {
+  margin-bottom: 0;
+}
+body main .header p {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+body main .search {
+  width: 30vw;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main .search input {
+  width: 80%;
+  margin: 0.4rem;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+}
+body main .search input:focus {
+  outline: 2px solid rgba(43, 131, 255, 0.4431372549);
+  border-radius: 0.2rem;
+}
+body main .search button {
+  background-color: #016bfd;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.4rem 0.7rem;
+  border-color: #016bfd;
+  box-shadow: 0 0 2px 1px rgba(46, 46, 46, 0.3764705882);
+  border-radius: 0.3rem;
+}
+body main .search button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+body main .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+body main .container .message {
+  text-align: center;
+}
+body main .container .box {
+  display: flex;
+  flex-direction: column;
+  width: 22vw;
+  min-height: 40vh;
+  margin: 1rem;
+}
+body main .container .box img {
+  box-shadow: 0 0 5px 2px rgba(40, 40, 40, 0.4392156863);
+  margin-bottom: 0.8rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+body main .container .box img.thumb {
+  width: 60px;
+  height: 40px;
+  margin-right: 0.7rem;
+}
+body main .container .box .thumb-wrapper {
+  margin: 0.7rem 0 1rem;
+}
+body main .container .box .product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+  margin-bottom: 1.5rem;
+}
+body main .container .box .product-info .product-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-right: 1rem;
+}
+body main .container .box .product-info .product-price {
+  color: #016bfd;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+body main .container .box .product-tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+body main .container .box .product-tags .tag {
+  background-color: #6d757d;
+  color: #fff;
+  padding: 0.1rem 0.55rem 0.3rem;
+  margin: 0.3rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+body .footer {
+  background-color: #515151;
+  color: #dddddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 101vw;
+  height: 4rem;
+  padding-top: 2rem;
+}
+body .footer .details {
+  margin-bottom: 2rem;
+}
+body .footer .details p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+body .footer .details p a {
+  text-decoration: none;
+  color: #bdc9d8;
+  font-size: 1rem;
+  font-family: "Acme", sans-serif;
+  margin: 0.2rem;
+}
+body .footer .details p a:hover {
+  color: #ffffff;
+}
+body .footer .social-links {
+  margin: 0 0.4rem 1.7rem;
+}
+body .footer .social-links a {
+  color: #d6d6d6;
+  text-decoration: none;
+  padding: 0.27rem;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body main .container .box {
+    width: 28vw;
+    min-height: 34vh;
+  }
+  body main .container .box .thumb-wrapper .thumb {
+    width: 50px;
+  }
+  body main .container .box .product-info .product-name {
+    font-size: 1rem;
+  }
+  body main .container .box .product-info .product-price {
+    font-size: 1rem;
+  }
+  body main .container .box .product-tags .tag {
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 767px) {
+  body main .search input {
+    width: auto;
+  }
+  body main .container .box {
+    width: 40vw;
+    min-height: 30vh;
+  }
+  body main .container .box img:last-child {
+    display: none;
+  }
+  body main .container .box .product-info .product-name {
+    font-size: 0.7rem;
+  }
+  body main .container .box .product-info .product-price {
+    font-size: 0.7rem;
+  }
+  body main .container .box .product-tags .tag {
+    font-size: 0.6rem;
+    padding: 0.1rem 0.6rem 0.2rem;
+    margin: 0.2rem;
+  }
+  body .footer {
+    flex-direction: column;
+    padding-bottom: 2rem;
+  }
+  body .footer .details {
+    margin: 0;
+  }
+}
