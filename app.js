@@ -43,7 +43,7 @@ function createBox(items) {
 
 	box.classList.add("box");
 	box.innerHTML = `
-	<img class="mainImage" src="/assets/images/main.png" alt="artificial product"/>
+	<img class="mainImage" src="assets/images/main.png" alt="artificial product"/>
 	`; // had to replace image since the ones from the api got discontinued
 	container.appendChild(box);
 
