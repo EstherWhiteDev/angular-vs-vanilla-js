@@ -9,49 +9,21 @@ searchBtn.addEventListener("click", () => {
 	fetch("https://fakerapi.it/api/v1/products")
 		.then((response) => response.json())
 		.then((items) => {
-			if (!input.value || input.value == 0) {
+			const inputValue = parseInt(input.value);
+			if (!inputValue || inputValue <= 0) {
 				container.innerHTML = `
-				<div class="message">
-				<p>No products Faked yet..</p>
-				</div>
-				`;
-			} else if (input.value == 1) {
-				const oneItem = items.data.slice(0, 1);
-				oneItem.forEach(createBox);
-			} else if (input.value == 2) {
-				const twoItems = items.data.slice(0, 2);
-				twoItems.forEach(createBox);
-			} else if (input.value == 3) {
-				const threeItems = items.data.slice(0, 3);
-				threeItems.forEach(createBox);
-			} else if (input.value == 4) {
-				const fourItems = items.data.slice(0, 4);
-				fourItems.forEach(createBox);
-			} else if (input.value == 5) {
-				const fiveItems = items.data.slice(0, 5);
-				console.log(fiveItems);
-				fiveItems.forEach(createBox);
-			} else if (input.value == 6) {
-				const sixItems = items.data.slice(0, 6);
-				sixItems.forEach(createBox);
-			} else if (input.value == 7) {
-				const sevenItems = items.data.slice(0, 7);
-				sevenItems.forEach(createBox);
-			} else if (input.value == 8) {
-				const eightItems = items.data.slice(0, 8);
-				eightItems.forEach(createBox);
-			} else if (input.value == 9) {
-				const nineItems = items.data.slice(0, 9);
-				nineItems.forEach(createBox);
-			} else if (input.value == 10) {
-				items.data.forEach(createBox);
+							<div class="message">
+									<p>No products Faked yet..</p>
+							</div>`;
+			} else if (inputValue > 10) {
+				container.innerHTML = `
+							<div class="message">
+									<p>Maximum product amount exceeded...</p>
+									<p>We can only supply up to 10 products at this point.</p>
+							</div>`;
 			} else {
-				container.innerHTML = `
-				<div class="message">
-				<p>Maximum product amount exceeded...</p>
-				<p>We can only supply up to 10 products at this point.</p>
-				</div>
-				`;
+				const displayedItems = items.data.slice(0, inputValue);
+				displayedItems.forEach(createBox);
 			}
 		});
 
@@ -71,8 +43,8 @@ function createBox(items) {
 
 	box.classList.add("box");
 	box.innerHTML = `
-	<img class="mainImage" src="${image}" alt="artificial product"/>
-	`;
+	<img class="mainImage" src="/assets/images/main.png" alt="artificial product"/>
+	`; // had to replace image since the ones from the api got discontinued
 	container.appendChild(box);
 
 	// Thumbnails
@@ -80,10 +52,17 @@ function createBox(items) {
 	thumbsWrapper.classList.add("thumbs-wrapper");
 	box.appendChild(thumbsWrapper);
 
+	// images.forEach((item) => {
+	// 	const thumb = document.createElement("img");
+	// 	thumb.classList.add("thumb");
+	// 	thumb.src = item.url;
+	// 	thumbsWrapper.appendChild(thumb);
+	// });
+
 	images.forEach((item) => {
 		const thumb = document.createElement("img");
 		thumb.classList.add("thumb");
-		thumb.src = item.url;
+		thumb.src = "assets/images/small.png";
 		thumbsWrapper.appendChild(thumb);
 	});
 
