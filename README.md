@@ -2,7 +2,7 @@
 
 [![image](youtube-thumbnail.jpg)](https://www.youtube.com/watch?v=3oAgpqxXHKI)
 
-### [VIEW LIVE](https://monacodelisa-yt.github.io/angular-vs-vanilla-js)
+### [VIEW LIVE](https://github.com/EstherWhiteDev/angular-vs-vanilla-js)
 
 <hr>
 ### pm-position-challenge instructions
@@ -35,3 +35,9 @@ For each tile, the main image, additional images, name, price, and tags for the 
 - Use JavaScript with ES6 syntax for the implementation
 
 🍀 Good luck!
+
+## 🔗 More Projects  
+Check out my latest and more elaborate projects on my website:  
+🌐 **[esthersoftware.dev](https://esthersoftware.dev)**  
+
+---
