@@ -38,6 +38,6 @@ For each tile, the main image, additional images, name, price, and tags for the 
 
 ## 🔗 More Projects  
 Check out my latest and more elaborate projects on my website:  
-🌐 **[esthersoftware.dev](https://esthersoftware.dev)**  
+🌐 **[esteecodes.com](https://esteecodes.com)**  
 
 ---
